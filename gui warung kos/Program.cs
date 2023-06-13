@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RegistrationForm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace gui_warung_kos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new menu());
+            Application.Run(new RegForm());
         }
     }
 }
