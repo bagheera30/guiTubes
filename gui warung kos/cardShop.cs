@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace gui_warung_kos
 {
-    public partial class Form1 : Form
+    public partial class cardShop : Form
     {
-        public Form1()
+        public cardShop()
         {
             InitializeComponent();
         }
