@@ -51,8 +51,17 @@
   <ItemGroup>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <Compile Include="daftarMenu.cs">
 =======
+=======
+    <Compile Include="Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cart.Designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
+>>>>>>> rizki
     <Compile Include="daftarMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +113,9 @@
     <Compile Include="RegForm.Designer.cs">
       <DependentUpon>RegForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="daftarMenu.resx">
       <DependentUpon>daftarMenu.cs</DependentUpon>
     </EmbeddedResource>
