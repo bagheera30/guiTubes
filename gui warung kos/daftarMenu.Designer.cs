@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(daftarMenu));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
 =======
@@ -38,6 +39,9 @@
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(daftarMenu));
 >>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
+=======
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(daftarMenu));
+>>>>>>> rizki
             this.button1 = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -47,6 +51,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -129,20 +134,38 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).BeginInit();
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
+=======
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.akun = new System.Windows.Forms.PictureBox();
+            this.keranjang = new System.Windows.Forms.PictureBox();
+            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.harga = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripsi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tersedia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Add = new System.Windows.Forms.DataGridViewButtonColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.akun)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.keranjang)).BeginInit();
+>>>>>>> rizki
             this.SuspendLayout();
             // 
             // button1
             // 
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.button1.Location = new System.Drawing.Point(254, 191);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 23);
             this.button1.TabIndex = 22;
 =======
+=======
+>>>>>>> rizki
             this.button1.Location = new System.Drawing.Point(269, 192);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(112, 23);
             this.button1.TabIndex = 26;
+<<<<<<< HEAD
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
             this.button1.Text = "tambah barang";
             this.button1.UseVisualStyleBackColor = true;
@@ -177,6 +200,13 @@
             this.textBox1.Size = new System.Drawing.Size(206, 22);
             this.textBox1.TabIndex = 18;
 =======
+=======
+            this.button1.Text = "tambah barang";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox4
+            // 
+>>>>>>> rizki
             this.textBox4.Location = new System.Drawing.Point(175, 192);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(65, 22);
@@ -202,12 +232,16 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(206, 22);
             this.textBox1.TabIndex = 22;
+<<<<<<< HEAD
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
 >>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
+=======
+>>>>>>> rizki
             // 
             // label4
             // 
             this.label4.AutoSize = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.label4.Location = new System.Drawing.Point(60, 182);
             this.label4.Name = "label4";
@@ -220,17 +254,23 @@
             this.label4.Size = new System.Drawing.Size(80, 16);
             this.label4.TabIndex = 17;
 =======
+=======
+>>>>>>> rizki
             this.label4.Location = new System.Drawing.Point(69, 198);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(80, 16);
             this.label4.TabIndex = 21;
+<<<<<<< HEAD
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
 >>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
+=======
+>>>>>>> rizki
             this.label4.Text = "Stok barang";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.label3.Location = new System.Drawing.Point(60, 132);
             this.label3.Name = "label3";
@@ -243,17 +283,23 @@
             this.label3.Size = new System.Drawing.Size(64, 16);
             this.label3.TabIndex = 16;
 =======
+=======
+>>>>>>> rizki
             this.label3.Location = new System.Drawing.Point(69, 148);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(64, 16);
             this.label3.TabIndex = 20;
+<<<<<<< HEAD
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
 >>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
+=======
+>>>>>>> rizki
             this.label3.Text = "Deskripsi";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.label2.Location = new System.Drawing.Point(60, 82);
             this.label2.Name = "label2";
@@ -266,17 +312,23 @@
             this.label2.Size = new System.Drawing.Size(91, 16);
             this.label2.TabIndex = 15;
 =======
+=======
+>>>>>>> rizki
             this.label2.Location = new System.Drawing.Point(69, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 16);
             this.label2.TabIndex = 19;
+<<<<<<< HEAD
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
 >>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
+=======
+>>>>>>> rizki
             this.label2.Text = "Harga barang";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.label1.Location = new System.Drawing.Point(60, 37);
             this.label1.Name = "label1";
@@ -288,10 +340,17 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 16);
             this.label1.TabIndex = 14;
+=======
+            this.label1.Location = new System.Drawing.Point(69, 53);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 16);
+            this.label1.TabIndex = 18;
+>>>>>>> rizki
             this.label1.Text = "nama barang";
             // 
             // dataGridView1
             // 
+<<<<<<< HEAD
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.no,
@@ -320,6 +379,57 @@
             this.nama.MinimumWidth = 6;
             this.nama.Name = "nama";
             this.nama.Width = 125;
+=======
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.No,
+            this.Nama,
+            this.harga,
+            this.descripsi,
+            this.tersedia,
+            this.Add});
+            this.dataGridView1.Location = new System.Drawing.Point(8, 221);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(785, 206);
+            this.dataGridView1.TabIndex = 17;
+            // 
+            // akun
+            // 
+            this.akun.Image = ((System.Drawing.Image)(resources.GetObject("akun.Image")));
+            this.akun.Location = new System.Drawing.Point(740, 23);
+            this.akun.Name = "akun";
+            this.akun.Size = new System.Drawing.Size(40, 37);
+            this.akun.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.akun.TabIndex = 16;
+            this.akun.TabStop = false;
+            // 
+            // keranjang
+            // 
+            this.keranjang.Image = ((System.Drawing.Image)(resources.GetObject("keranjang.Image")));
+            this.keranjang.Location = new System.Drawing.Point(677, 33);
+            this.keranjang.Name = "keranjang";
+            this.keranjang.Size = new System.Drawing.Size(35, 27);
+            this.keranjang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.keranjang.TabIndex = 15;
+            this.keranjang.TabStop = false;
+            // 
+            // No
+            // 
+            this.No.HeaderText = "No";
+            this.No.MinimumWidth = 6;
+            this.No.Name = "No";
+            this.No.Width = 50;
+            // 
+            // Nama
+            // 
+            this.Nama.HeaderText = "Nama";
+            this.Nama.MinimumWidth = 6;
+            this.Nama.Name = "Nama";
+            this.Nama.Width = 125;
+>>>>>>> rizki
             // 
             // harga
             // 
@@ -328,12 +438,21 @@
             this.harga.Name = "harga";
             this.harga.Width = 125;
             // 
+<<<<<<< HEAD
             // deskripsi
             // 
             this.deskripsi.HeaderText = "descripsi";
             this.deskripsi.MinimumWidth = 6;
             this.deskripsi.Name = "deskripsi";
             this.deskripsi.Width = 125;
+=======
+            // descripsi
+            // 
+            this.descripsi.HeaderText = "descripsi";
+            this.descripsi.MinimumWidth = 6;
+            this.descripsi.Name = "descripsi";
+            this.descripsi.Width = 125;
+>>>>>>> rizki
             // 
             // tersedia
             // 
@@ -342,6 +461,7 @@
             this.tersedia.Name = "tersedia";
             this.tersedia.Width = 125;
             // 
+<<<<<<< HEAD
             // ADD
             // 
             this.ADD.HeaderText = "ADD";
@@ -485,11 +605,22 @@
             // 
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
 >>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
+=======
+            // Add
+            // 
+            this.Add.HeaderText = "Add";
+            this.Add.MinimumWidth = 6;
+            this.Add.Name = "Add";
+            this.Add.Text = "add";
+            this.Add.Width = 125;
+            // 
+>>>>>>> rizki
             // daftarMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -499,6 +630,8 @@
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
             this.Controls.Add(this.dataGridView1);
 >>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
+=======
+>>>>>>> rizki
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -508,6 +641,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+<<<<<<< HEAD
 <<<<<<< HEAD
             this.Controls.Add(this.akun);
             this.Controls.Add(this.keranjang);
@@ -535,12 +669,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
 >>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
+=======
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.akun);
+            this.Controls.Add(this.keranjang);
+            this.Name = "daftarMenu";
+            this.Text = "daftarMenucs";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.akun)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.keranjang)).EndInit();
+>>>>>>> rizki
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
+<<<<<<< HEAD
 <<<<<<< HEAD
 
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -550,6 +695,8 @@
 =======
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
 >>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
+=======
+>>>>>>> rizki
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
@@ -559,6 +706,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+<<<<<<< HEAD
 <<<<<<< HEAD
         private System.Windows.Forms.PictureBox akun;
         private System.Windows.Forms.PictureBox keranjang;
@@ -586,5 +734,16 @@
         private System.Windows.Forms.BindingSource menuBindingSource;
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
 >>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
+=======
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.PictureBox akun;
+        private System.Windows.Forms.PictureBox keranjang;
+        private System.Windows.Forms.DataGridViewTextBoxColumn No;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nama;
+        private System.Windows.Forms.DataGridViewTextBoxColumn harga;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripsi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tersedia;
+        private System.Windows.Forms.DataGridViewButtonColumn Add;
+>>>>>>> rizki
     }
 }
