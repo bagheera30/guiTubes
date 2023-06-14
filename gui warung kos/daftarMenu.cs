@@ -1,9 +1,13 @@
 <<<<<<< HEAD
 ﻿using System;
 =======
+<<<<<<< HEAD
+﻿using System;
+=======
 ﻿using Newtonsoft.Json;
 using System;
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
+>>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,18 +18,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 using Newtonsoft.Json;
 =======
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
+>>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
 
 namespace gui_warung_kos
 {
     public partial class daftarMenu : Form
     {
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
 
 =======
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
+>>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
         private const string url = "http://localhost:5065/api/menu";
         HttpClient httpClient;
         private Timer timer;
@@ -35,11 +45,17 @@ namespace gui_warung_kos
             httpClient = new HttpClient();
             timer = new Timer();
 <<<<<<< HEAD
+            timer.Interval = 100;
+=======
+<<<<<<< HEAD
             timer.Interval = 5000;
+>>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
             timer.Tick += Timer_Tick;
         }
 
         private async void daftarMenu_Load(object sender, EventArgs e)
+<<<<<<< HEAD
+=======
 =======
             timer.Interval = 100;
             timer.Tick += Timer_Tick;
@@ -47,6 +63,7 @@ namespace gui_warung_kos
 
         private async void daftarMenu_LoadAsync(object sender, EventArgs e)
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
+>>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
         {
             try
             {
@@ -70,9 +87,13 @@ namespace gui_warung_kos
                 MessageBox.Show("Failed to fetch menus: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
 =======
 
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
+>>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
         }
         private async Task RefreshDataGridView()
         {
@@ -86,6 +107,10 @@ namespace gui_warung_kos
             var json = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<List<Menu>>(json);
         }
+<<<<<<< HEAD
+    }
+}
+=======
 
 <<<<<<< HEAD
         private void button1_Click(object sender, EventArgs e)
@@ -168,3 +193,4 @@ namespace gui_warung_kos
 }
 
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
+>>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee

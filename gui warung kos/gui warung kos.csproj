@@ -58,6 +58,16 @@
     </Compile>
     <Compile Include="Form1.cs">
 =======
+<<<<<<< HEAD
+    <Compile Include="daftarMenu.cs">
+>>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="daftarMenu.Designer.cs">
+      <DependentUpon>daftarMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+=======
     <Compile Include="cardShop.cs">
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
       <SubType>Form</SubType>
@@ -87,6 +97,8 @@
     <EmbeddedResource Include="daftarMenu.resx">
       <DependentUpon>daftarMenu.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
+=======
     <EmbeddedResource Include="menu.resx">
       <DependentUpon>menu.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +110,7 @@
       <DependentUpon>daftarMenu.cs</DependentUpon>
     </EmbeddedResource>
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
+>>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -112,10 +125,13 @@
       <DependentUpon>RegForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+<<<<<<< HEAD
+=======
 =======
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Menu.datasource" />
 >>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
+>>>>>>> 686a2c4bc99fc84d965e9d489b3a36fd9ace55ee
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
