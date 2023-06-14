@@ -17,7 +17,11 @@ namespace gui_warung_kos
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new RegForm());
+=======
+            Application.Run(new daftarMenu());
+>>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
         }
     }
 }

@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="daftarMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -56,10 +57,19 @@
       <DependentUpon>daftarMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
+=======
+    <Compile Include="cardShop.cs">
+>>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="cardShop.Designer.cs">
+      <DependentUpon>cardShop.cs</DependentUpon>
+    </Compile>
+    <Compile Include="daftarMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="daftarMenu.Designer.cs">
+      <DependentUpon>daftarMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="menu.cs" />
     <Compile Include="menu.Designer.cs">
@@ -67,6 +77,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="RegForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +90,14 @@
     <EmbeddedResource Include="menu.resx">
       <DependentUpon>menu.cs</DependentUpon>
     </EmbeddedResource>
+=======
+    <EmbeddedResource Include="cardShop.resx">
+      <DependentUpon>cardShop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="daftarMenu.resx">
+      <DependentUpon>daftarMenu.cs</DependentUpon>
+    </EmbeddedResource>
+>>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -88,10 +107,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="RegForm.resx">
       <DependentUpon>RegForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+=======
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\Menu.datasource" />
+>>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -106,6 +130,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ProjectReference Include="..\RegistrationForm\RegistrationForm.csproj">
       <Project>{35d0789b-5adf-4b8c-b35e-31e8110c1a99}</Project>
       <Name>RegistrationForm</Name>
@@ -114,6 +139,9 @@
       <Project>{1ac98d72-17b7-42ed-9af7-f543c4ecb73e}</Project>
       <Name>Registration</Name>
     </ProjectReference>
+=======
+    <WCFMetadata Include="Connected Services\" />
+>>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

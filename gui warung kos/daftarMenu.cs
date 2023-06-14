@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 ﻿using System;
+=======
+﻿using Newtonsoft.Json;
+using System;
+>>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,13 +13,19 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+<<<<<<< HEAD
 using Newtonsoft.Json;
+=======
+>>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
 
 namespace gui_warung_kos
 {
     public partial class daftarMenu : Form
     {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
         private const string url = "http://localhost:5065/api/menu";
         HttpClient httpClient;
         private Timer timer;
@@ -23,11 +34,19 @@ namespace gui_warung_kos
             InitializeComponent();
             httpClient = new HttpClient();
             timer = new Timer();
+<<<<<<< HEAD
             timer.Interval = 5000;
             timer.Tick += Timer_Tick;
         }
 
         private async void daftarMenu_Load(object sender, EventArgs e)
+=======
+            timer.Interval = 100;
+            timer.Tick += Timer_Tick;
+        }
+
+        private async void daftarMenu_LoadAsync(object sender, EventArgs e)
+>>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
         {
             try
             {
@@ -50,6 +69,10 @@ namespace gui_warung_kos
             {
                 MessageBox.Show("Failed to fetch menus: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
         }
         private async Task RefreshDataGridView()
         {
@@ -64,9 +87,40 @@ namespace gui_warung_kos
             return JsonConvert.DeserializeObject<List<Menu>>(json);
         }
 
+<<<<<<< HEAD
         private void button1_Click(object sender, EventArgs e)
         {
 
+=======
+        private async void button1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Mendapatkan daftar menu dari API
+                List<Menu> menus = await GetMenusFromApi();
+
+                // Mendapatkan ID terbesar dari daftar menu
+                int lastId = menus.Count > 0 ? menus.Max(m => m.id) : 0;
+
+                Menu menu = new Menu
+                {
+                    id = lastId + 1, // Menambahkan 1 ke ID terakhir untuk mendapatkan ID baru
+                    Nama = textBox1.Text.Trim(),
+                    harga = int.Parse(textBox2.Text.Trim()),
+                    descripsi = textBox3.Text.Trim(),
+                    tersedia = int.Parse(textBox4.Text.Trim())
+                };
+
+                await AddMenuToApi(menu);
+
+                MessageBox.Show("Menu added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearInputFields();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to add menu: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+>>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
         }
         private async Task AddMenuToApi(Menu menu)
         {
@@ -82,7 +136,22 @@ namespace gui_warung_kos
             textBox3.Text = "";
             textBox4.Text = "";
         }
+<<<<<<< HEAD
         
+=======
+
+        private async void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridView1.Columns["action"].Index && e.RowIndex >= 0)
+            {
+                try
+                {
+                    int id = (int)dataGridView1.Rows[e.RowIndex].Cells["id"].Value;
+                }
+            }
+        }
+     
+>>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
     }
     public class Menu
     {
@@ -92,5 +161,10 @@ namespace gui_warung_kos
         public string descripsi { get; set; }
         public int tersedia { get; set; }
     }
+<<<<<<< HEAD
 
 }
+=======
+}
+
+>>>>>>> 7730df9977e186fe5e42fc8760cd551a8405c167
