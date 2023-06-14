@@ -18,6 +18,7 @@ namespace gui_warung_kos
         private const string url = "http://localhost:5065/api/menu";
         HttpClient httpClient;
         private Timer timer;
+        private Cart cart;
         public daftarMenu()
         {
             InitializeComponent();
@@ -25,6 +26,7 @@ namespace gui_warung_kos
             timer = new Timer();
             timer.Interval = 100;
             timer.Tick += Timer_Tick;
+            cart = new Cart();
         }
 
         private async void daftarMenu_LoadAsync(object sender, EventArgs e)
@@ -91,12 +93,12 @@ namespace gui_warung_kos
                 try
                 {
                     // Dapatkan nilai dari sel yang diklik
-                    int menuId = (int)dataGridView1.Rows[e.RowIndex].Cells["No"].Value;
+                    int menuNo = (int)dataGridView1.Rows[e.RowIndex].Cells["No"].Value;
                     string menuName = (string)dataGridView1.Rows[e.RowIndex].Cells["Nama"].Value;
                     int menuPrice = (int)dataGridView1.Rows[e.RowIndex].Cells["harga"].Value;
 
                     // Tambahkan nilai ke form keranjang (misalnya, menggunakan form keranjang bernama "cartForm")
-                    cartForm.AddItem(menuId, menuName, menuPrice);
+                    cart.AddItem(menuNo, menuName, menuPrice);
 
                     MessageBox.Show("Menu added to cart.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
