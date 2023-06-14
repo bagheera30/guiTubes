@@ -1,20 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace gui_warung_kos
 {
-    public partial class Form1 : Form
+    public class Menu
     {
-        public Form1()
-        {
-            InitializeComponent();
-        }
+        public int id { get; set; }
+        public string Nama { get; set; }
+        public int harga { get; set; }
+        public string descripsi { get; set; }
+        public int tersedia { get; set; }
     }
 }
