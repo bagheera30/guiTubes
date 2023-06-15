@@ -56,17 +56,17 @@
       <DependentUpon>CartForm.cs</DependentUpon>
     </Compile>
     <Compile Include="CartItem.cs" />
+    <Compile Include="daftarMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="daftarMenu.Designer.cs">
+      <DependentUpon>daftarMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ListMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ListMenu.Designer.cs">
-      <DependentUpon>ListMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
@@ -89,11 +89,17 @@
     <Compile Include="RegForm.Designer.cs">
       <DependentUpon>RegForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TampilanMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TampilanMenu.designer.cs">
+      <DependentUpon>TampilanMenu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CartForm.resx">
       <DependentUpon>CartForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListMenu.resx">
-      <DependentUpon>ListMenu.cs</DependentUpon>
+    <EmbeddedResource Include="daftarMenu.resx">
+      <DependentUpon>daftarMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -113,7 +119,20 @@
     <EmbeddedResource Include="RegForm.resx">
       <DependentUpon>RegForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TampilanMenu.resx">
+      <DependentUpon>TampilanMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\CartForm.datasource" />
+    <None Include="Properties\DataSources\CartItem.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\gui.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\gui.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\Login.LoginForm.datasource" />
+    <None Include="Properties\DataSources\Menu.datasource" />
+    <None Include="Properties\DataSources\Pembayaran.pembayaran1.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\DataSources\RegistrationForm.RegForm.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -128,9 +147,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RegistrationForm\RegistrationForm.csproj">
+      <Project>{35d0789b-5adf-4b8c-b35e-31e8110c1a99}</Project>
+      <Name>RegistrationForm</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Registration\Registration.csproj">
       <Project>{1ac98d72-17b7-42ed-9af7-f543c4ecb73e}</Project>
       <Name>Registration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UtilityLIbrary\UtilityLIbrary.csproj">
+      <Project>{cceda67d-43b6-41ae-bb9a-38ea6b0fd688}</Project>
+      <Name>UtilityLIbrary</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
