@@ -8,6 +8,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Login;
 using Registration;
 
 namespace RegistrationForm
@@ -56,6 +57,13 @@ namespace RegistrationForm
         private void cpwTextBox_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            var loginform = new LoginForm();
+            this.Visible = false;
+            loginform.Show();
         }
     }
 }
