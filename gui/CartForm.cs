@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pembayaran;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,6 +14,7 @@ namespace gui
     public partial class CartForm : Form
     {
         private List<CartItem> cartItems;
+        pembayaran1 pembayaran = new pembayaran1();
         public CartForm()
         {
             InitializeComponent();
@@ -40,7 +42,9 @@ namespace gui
             }
 
             // Tampilkan total harga pada label
-            labelTotalPrice.Text = "Total Price: $" + totalPrice.ToString();
+            labelTotalPrice.Text = "Total Price: Rp." + totalPrice.ToString();
+            pembayaran.LoadTagihan(totalPrice);
+
         }
 
         private void buttonCheckout_Click(object sender, EventArgs e)
@@ -54,6 +58,14 @@ namespace gui
             UpdateTotalPrice();
 
             MessageBox.Show("Checkout successful.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void buttonCheckout_Click_1(object sender, EventArgs e)
+        {
+           
+            
+            pembayaran.Show();
+            this.Hide();
         }
     }
 }

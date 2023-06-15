@@ -51,6 +51,7 @@
             this.buttonCheckout.TabIndex = 4;
             this.buttonCheckout.Text = "checkout";
             this.buttonCheckout.UseVisualStyleBackColor = true;
+            this.buttonCheckout.Click += new System.EventHandler(this.buttonCheckout_Click_1);
             // 
             // listBox1
             // 

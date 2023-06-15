@@ -15,7 +15,7 @@ namespace gui
 {
     public partial class daftarMenu : Form
     {
-        private const string url = "http://localhost:5065/api/menu";
+        private const string url = "http://localhost:5046/api/menu";
         HttpClient httpClient;
         private Timer timer;
         CartForm cart = new CartForm();
@@ -101,8 +101,8 @@ namespace gui
             {
                 try
                 {
-                    object menuNameObj = dataGridView1.Rows[e.RowIndex].Cells["Nama"].Value;
-                    object menuPriceObj = dataGridView1.Rows[e.RowIndex].Cells["Harga"].Value;
+                    object menuNameObj = dataGridView1.Rows[e.RowIndex].Cells["namaDataGridViewTextBoxColumn"].Value;
+                    object menuPriceObj = dataGridView1.Rows[e.RowIndex].Cells["hargaDataGridViewTextBoxColumn"].Value;
 
                     if (menuNameObj != null && menuPriceObj != null)
                     {
@@ -142,6 +142,12 @@ namespace gui
             textBox2.Text = "";
             textBox3.Text = "";
             textBox4.Text = "";
+        }
+
+        private void keranjang_Click(object sender, EventArgs e)
+        {
+            cart.Show();
+            this.Hide();
         }
     }
 }

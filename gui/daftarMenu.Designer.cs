@@ -42,15 +42,17 @@
             this.keranjang = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.regFormBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.No = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nama = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Harga = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.deskripsi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tersedia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Add = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.menuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.namaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hargaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descripsiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tersediaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Add = new System.Windows.Forms.DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)(this.keranjang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.regFormBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // button1
@@ -130,30 +132,31 @@
             // keranjang
             // 
             this.keranjang.Image = ((System.Drawing.Image)(resources.GetObject("keranjang.Image")));
-            this.keranjang.Location = new System.Drawing.Point(543, 31);
+            this.keranjang.Location = new System.Drawing.Point(706, 12);
             this.keranjang.Name = "keranjang";
             this.keranjang.Size = new System.Drawing.Size(35, 27);
             this.keranjang.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.keranjang.TabIndex = 23;
             this.keranjang.TabStop = false;
+            this.keranjang.Click += new System.EventHandler(this.keranjang_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.No,
-            this.Nama,
-            this.Harga,
-            this.deskripsi,
-            this.tersedia,
+            this.idDataGridViewTextBoxColumn,
+            this.namaDataGridViewTextBoxColumn,
+            this.hargaDataGridViewTextBoxColumn,
+            this.descripsiDataGridViewTextBoxColumn,
+            this.tersediaDataGridViewTextBoxColumn,
             this.Add});
-            this.dataGridView1.DataSource = this.regFormBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(-25, 269);
+            this.dataGridView1.DataSource = this.menuBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 243);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(684, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(760, 150);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -161,53 +164,65 @@
             // 
             this.regFormBindingSource.DataSource = typeof(RegistrationForm.RegForm);
             // 
-            // No
+            // menuBindingSource
             // 
-            this.No.HeaderText = "No";
-            this.No.MinimumWidth = 6;
-            this.No.Name = "No";
-            this.No.Width = 50;
+            this.menuBindingSource.DataSource = typeof(gui.Menu);
             // 
-            // Nama
+            // idDataGridViewTextBoxColumn
             // 
-            this.Nama.HeaderText = "Nama";
-            this.Nama.MinimumWidth = 6;
-            this.Nama.Name = "Nama";
-            this.Nama.Width = 125;
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "No";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 125;
             // 
-            // Harga
+            // namaDataGridViewTextBoxColumn
             // 
-            this.Harga.HeaderText = "Harga";
-            this.Harga.MinimumWidth = 6;
-            this.Harga.Name = "Harga";
-            this.Harga.Width = 125;
+            this.namaDataGridViewTextBoxColumn.DataPropertyName = "Nama";
+            this.namaDataGridViewTextBoxColumn.HeaderText = "Nama";
+            this.namaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.namaDataGridViewTextBoxColumn.Name = "namaDataGridViewTextBoxColumn";
+            this.namaDataGridViewTextBoxColumn.Width = 125;
             // 
-            // deskripsi
+            // hargaDataGridViewTextBoxColumn
             // 
-            this.deskripsi.HeaderText = "deskripsi";
-            this.deskripsi.MinimumWidth = 6;
-            this.deskripsi.Name = "deskripsi";
-            this.deskripsi.Width = 125;
+            this.hargaDataGridViewTextBoxColumn.DataPropertyName = "harga";
+            this.hargaDataGridViewTextBoxColumn.HeaderText = "harga";
+            this.hargaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.hargaDataGridViewTextBoxColumn.Name = "hargaDataGridViewTextBoxColumn";
+            this.hargaDataGridViewTextBoxColumn.Width = 125;
             // 
-            // tersedia
+            // descripsiDataGridViewTextBoxColumn
             // 
-            this.tersedia.HeaderText = "tersedia";
-            this.tersedia.MinimumWidth = 6;
-            this.tersedia.Name = "tersedia";
-            this.tersedia.Width = 125;
+            this.descripsiDataGridViewTextBoxColumn.DataPropertyName = "descripsi";
+            this.descripsiDataGridViewTextBoxColumn.HeaderText = "descripsi";
+            this.descripsiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descripsiDataGridViewTextBoxColumn.Name = "descripsiDataGridViewTextBoxColumn";
+            this.descripsiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // tersediaDataGridViewTextBoxColumn
+            // 
+            this.tersediaDataGridViewTextBoxColumn.DataPropertyName = "tersedia";
+            this.tersediaDataGridViewTextBoxColumn.HeaderText = "tersedia";
+            this.tersediaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.tersediaDataGridViewTextBoxColumn.Name = "tersediaDataGridViewTextBoxColumn";
+            this.tersediaDataGridViewTextBoxColumn.Width = 125;
             // 
             // Add
             // 
             this.Add.HeaderText = "Add";
             this.Add.MinimumWidth = 6;
             this.Add.Name = "Add";
-            this.Add.Width = 70;
+            this.Add.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Add.Text = "Add";
+            this.Add.Width = 80;
             // 
             // daftarMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(641, 450);
+            this.ClientSize = new System.Drawing.Size(772, 450);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.keranjang);
             this.Controls.Add(this.button1);
@@ -225,6 +240,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.keranjang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.regFormBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.menuBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,12 +259,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox keranjang;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn No;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nama;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Harga;
-        private System.Windows.Forms.DataGridViewTextBoxColumn deskripsi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tersedia;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Add;
         private System.Windows.Forms.BindingSource regFormBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn namaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hargaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descripsiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tersediaDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewButtonColumn Add;
+        private System.Windows.Forms.BindingSource menuBindingSource;
     }
 }

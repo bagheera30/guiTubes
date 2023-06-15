@@ -16,15 +16,16 @@ namespace Pembayaran
     public partial class pembayaran1 : Form
     {
         private int tagihanDefault;
+        private int Tagihan;
 
         public pembayaran1()
         {
             InitializeComponent();
 
-            LoadTagihan();
+            LoadTagihan(Tagihan);
         }
 
-        private void LoadTagihan()
+        public void LoadTagihan(int tagihan)
         {
             try
             {
@@ -37,10 +38,10 @@ namespace Pembayaran
                 ShowErrorMessage("Terjadi kesalahan saat memuat data tagihan: " + ex.Message);
             }
 
-            DisplayTagihan();
+            DisplayTagihan(tagihan);
         }
 
-        private void DisplayTagihan()
+        private void DisplayTagihan(int total)
         {
             tagihan.Text = tagihanDefault.ToString();
         }
@@ -141,7 +142,7 @@ namespace Pembayaran
         {
             if (string.IsNullOrEmpty(tagihan.Text))
             {
-                DisplayTagihan();
+                DisplayTagihan(Tagihan);
             }
         }
         private void infotagihan_Click(object sender, EventArgs e)
