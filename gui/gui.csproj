@@ -95,12 +95,6 @@
     <Compile Include="RegForm.Designer.cs">
       <DependentUpon>RegForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="TampilanMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="TampilanMenu.designer.cs">
-      <DependentUpon>TampilanMenu.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="CartForm.resx">
       <DependentUpon>CartForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,9 +118,6 @@
     </Compile>
     <EmbeddedResource Include="RegForm.resx">
       <DependentUpon>RegForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="TampilanMenu.resx">
-      <DependentUpon>TampilanMenu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\CartForm.datasource" />
