@@ -1,23 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.Contracts;
-using System.Linq;
-using System.Text;
+﻿using System.Diagnostics.Contracts;
 using System.Text.Json;
-using System.Threading.Tasks;
 
-namespace UtilityLibrary
+namespace Menu
 {
     public class Menu
     {
         public int id { get; set; }
         public string Nama { get; set; }
         public int harga { get; set; }
-        public string descripsi { get; set; }
-        public int tersedia { get; set; }
-
+        public string foto { get; set; }
     }
-
     public static class MenuManager
     {
         private static List<Menu> menus;
@@ -93,15 +85,14 @@ namespace UtilityLibrary
         {
             Contract.Requires(updatedMenu != null, "Updated menu object is null.");
 
-            Contract.Ensures(menus.All(menu => menu.Nama != nama) || menus.Any(menu => menu.Nama == updatedMenu.Nama && menu.harga == updatedMenu.harga && menu.descripsi == updatedMenu.descripsi && menu.tersedia==updatedMenu.tersedia));
+            Contract.Ensures(menus.All(menu => menu.Nama != nama) || menus.Any(menu => menu.Nama == updatedMenu.Nama && menu.harga == updatedMenu.harga && menu.foto == updatedMenu.foto));
 
             Menu menu = menus.FirstOrDefault(m => m.Nama == nama);
             if (menu != null)
             {
                 menu.Nama = updatedMenu.Nama;
                 menu.harga = updatedMenu.harga; // Memperbarui nilai harga menu yang ada
-                menu.descripsi = updatedMenu.descripsi;
-                menu.tersedia = updatedMenu.tersedia;
+                menu.foto = updatedMenu.foto;
                 Console.WriteLine($"Menu with name '{nama}' has been updated: {menu.Nama}");
             }
             else
@@ -127,4 +118,5 @@ namespace UtilityLibrary
 
         }
     }
+}
 }
