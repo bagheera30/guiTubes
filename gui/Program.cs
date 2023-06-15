@@ -17,7 +17,11 @@ namespace gui
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new daftarMenu());
+=======
+            Application.Run(new LoginForm());
+>>>>>>> 2b5d8f47e5edc47e61524f3b571632801b9aa6d3
         }
     }
 }

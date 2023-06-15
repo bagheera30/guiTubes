@@ -1,4 +1,5 @@
-﻿using RegistrationForm;
+﻿using gui;
+using RegistrationForm;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,6 +39,10 @@ namespace Login
             ProcessTableDrivenLogic(username, password);
             // atau
             ProcessAutomataLogic(username, password);
+
+            var dashboardform = new Dashboard();
+            this.Visible = false;
+            dashboardform.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
