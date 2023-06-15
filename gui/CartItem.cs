@@ -8,13 +8,21 @@ namespace gui
 {
     public class CartItem
     {
+<<<<<<< HEAD
         public int MenuId { get; }
+=======
+        
+>>>>>>> master
         public string MenuName { get; }
         public int Price { get; }
 
         public CartItem(string menuName, int price)
         {
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> master
             MenuName = menuName;
             Price = price;
         }

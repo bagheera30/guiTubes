@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Login;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,11 @@ namespace gui
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new listMenu());
+=======
+            Application.Run(new ListMenu());
+>>>>>>> master
         }
     }
 }

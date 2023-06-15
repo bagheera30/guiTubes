@@ -1,6 +1,6 @@
 ﻿namespace Pembayaran
 {
-    partial class Form1
+    partial class pembayaran1
     {
         /// <summary>
         /// Required designer variable.
@@ -48,6 +48,7 @@
             this.infotagihan.Size = new System.Drawing.Size(57, 16);
             this.infotagihan.TabIndex = 0;
             this.infotagihan.Text = "Tagihan";
+            this.infotagihan.Click += new System.EventHandler(this.infotagihan_Click);
             // 
             // tagihan
             // 
@@ -136,7 +137,7 @@
             this.bayar.UseVisualStyleBackColor = true;
             this.bayar.Click += new System.EventHandler(this.bayar_Click);
             // 
-            // Form1
+            // pembayaran1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -151,7 +152,7 @@
             this.Controls.Add(this.infopembayaran);
             this.Controls.Add(this.tagihan);
             this.Controls.Add(this.infotagihan);
-            this.Name = "Form1";
+            this.Name = "pembayaran1";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

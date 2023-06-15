@@ -37,6 +37,7 @@
             this.pwTextBox = new System.Windows.Forms.TextBox();
             this.cpwTextBox = new System.Windows.Forms.TextBox();
             this.registerButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -110,19 +111,30 @@
             // 
             // registerButton
             // 
-            this.registerButton.Location = new System.Drawing.Point(304, 286);
+            this.registerButton.Location = new System.Drawing.Point(415, 275);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(75, 23);
+            this.registerButton.Size = new System.Drawing.Size(125, 32);
             this.registerButton.TabIndex = 8;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = true;
             this.registerButton.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(171, 275);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(128, 32);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Back To Login";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // RegForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(669, 450);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.cpwTextBox);
             this.Controls.Add(this.pwTextBox);
@@ -151,6 +163,7 @@
         private System.Windows.Forms.TextBox pwTextBox;
         private System.Windows.Forms.TextBox cpwTextBox;
         private System.Windows.Forms.Button registerButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 

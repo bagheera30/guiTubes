@@ -13,10 +13,11 @@ using System.IO;
 
 namespace Pembayaran
 {
-    public partial class Form1 : Form
+    public partial class pembayaran1 : Form
     {
-        public int tagihanDefault;
-        public Form1()
+        private int tagihanDefault;
+
+        public pembayaran1()
         {
             InitializeComponent();
 
@@ -27,22 +28,20 @@ namespace Pembayaran
         {
             try
             {
-                // Membaca isi file "tagihan.json"
                 string json = File.ReadAllText("tagihan.json");
-
-                // Deserialisasi JSON menjadi objek
                 var data = JsonConvert.DeserializeObject<dynamic>(json);
-
-                // Mendapatkan nilai tagihanDefault dari data JSON
                 tagihanDefault = data.tagihanDefault;
             }
             catch (Exception ex)
             {
-                // Menangani kesalahan jika terjadi masalah saat membaca file JSON
-                MessageBox.Show("Terjadi kesalahan saat memuat data tagihan: " + ex.Message, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowErrorMessage("Terjadi kesalahan saat memuat data tagihan: " + ex.Message);
             }
 
-            // Menampilkan nilai tagihanDefault pada TextBox
+            DisplayTagihan();
+        }
+
+        private void DisplayTagihan()
+        {
             tagihan.Text = tagihanDefault.ToString();
         }
         private void infometode_TextChanged(object sender, EventArgs e)
@@ -96,39 +95,58 @@ namespace Pembayaran
                 if (jumlahPembayaran == tagihanDefault)
                 {
                     MessageBox.Show("Pembayaran sedang diproses...", "Informasi Pembayaran", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    await Task.Delay(2000); // Menunda eksekusi selama 2 detik (2000 milidetik)
+                    await Task.Delay(2000);
 
                     string metodePembayaran = infometode.Text;
 
                     if (metodePembayaran == "QRIS" || metodePembayaran == "E-Wallet")
                     {
-                        string informasi = $"Tagihan: {tagihanDefault}\nJumlah Pembayaran: {jumlahPembayaran}\nMetode Pembayaran: {metodePembayaran}";
-                        MessageBox.Show("Pembayaran sukses!\n\n" + informasi, "Informasi Pembayaran", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ShowPaymentSuccess(tagihanDefault, jumlahPembayaran, metodePembayaran);
                     }
                     else if (metodePembayaran == "Cash")
                     {
                         int kembalian = jumlahPembayaran - tagihanDefault;
-                        string informasi = $"Tagihan: {tagihanDefault}\nJumlah Pembayaran: {jumlahPembayaran}\nMetode Pembayaran: {metodePembayaran}\nKembalian: {kembalian}";
-                        MessageBox.Show("Pembayaran sukses!\n\n" + informasi, "Informasi Pembayaran", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        ShowPaymentSuccess(tagihanDefault, jumlahPembayaran, metodePembayaran, kembalian);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Pembayaran gagal! Jumlah pembayaran tidak sesuai dengan tagihan.", "Informasi Pembayaran", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    ShowErrorMessage("Pembayaran gagal! Jumlah pembayaran tidak sesuai dengan tagihan.");
                 }
             }
             else
             {
-                MessageBox.Show("Jumlah pembayaran tidak valid!", "Informasi Pembayaran", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                ShowErrorMessage("Jumlah pembayaran tidak valid!");
             }
+        }
+
+        private void ShowPaymentSuccess(int tagihan, int jumlahPembayaran, string metodePembayaran, int kembalian = 0)
+        {
+            string informasi = $"Tagihan: {tagihan}\nJumlah Pembayaran: {jumlahPembayaran}\nMetode Pembayaran: {metodePembayaran}";
+
+            if (kembalian > 0)
+            {
+                informasi += $"\nKembalian: {kembalian}";
+            }
+
+            MessageBox.Show("Pembayaran sukses!\n\n" + informasi, "Informasi Pembayaran", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void ShowErrorMessage(string errorMessage)
+        {
+            MessageBox.Show(errorMessage, "Kesalahan", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void tagihan_TextChanged(object sender, EventArgs e)
         {
-            if (tagihan.Text == string.Empty)
+            if (string.IsNullOrEmpty(tagihan.Text))
             {
-                tagihan.Text = tagihanDefault.ToString();
+                DisplayTagihan();
             }
+        }
+        private void infotagihan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
