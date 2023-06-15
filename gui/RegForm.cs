@@ -33,7 +33,8 @@ namespace RegistrationForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (RegistrationLibrary.areNull(namaTextBox.Text) || RegistrationLibrary.areNull(usernameTextBox.Text) || RegistrationLibrary.areNull(pwTextBox.Text) || RegistrationLibrary.areNull(cpwTextBox.Text))
+            if (RegistrationLibrary.areNull(namaTextBox.Text) || RegistrationLibrary.areNull(usernameTextBox.Text) 
+                || RegistrationLibrary.areNull(pwTextBox.Text) || RegistrationLibrary.areNull(cpwTextBox.Text))
             {
                 MessageBox.Show("Silahkan isi kolom yang masih kosong");
             }
