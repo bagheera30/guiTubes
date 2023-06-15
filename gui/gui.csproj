@@ -112,6 +112,10 @@
       <Project>{1ac98d72-17b7-42ed-9af7-f543c4ecb73e}</Project>
       <Name>Registration</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UtilityLIbrary\UtilityLIbrary.csproj">
+      <Project>{cceda67d-43b6-41ae-bb9a-38ea6b0fd688}</Project>
+      <Name>UtilityLIbrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

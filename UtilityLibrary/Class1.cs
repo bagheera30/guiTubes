@@ -1,4 +1,5 @@
-﻿using System.Diagnostics.Contracts;
+﻿using System;
+using System.Diagnostics.Contracts;
 
 namespace UtilityLibrary
 {
@@ -8,7 +9,6 @@ namespace UtilityLibrary
         {
             if (string.IsNullOrWhiteSpace(str))
             {
-                Contract.Requires<ArgumentNullException>(str != null, "str");
                 return true;
             }
             return false;

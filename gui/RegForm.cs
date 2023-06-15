@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Login;
 using Registration;
+using UtilityLibrary;
 
 namespace RegistrationForm
 {
@@ -32,7 +33,11 @@ namespace RegistrationForm
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (RegistrationClass.checkUsername(namaTextBox.Text)){
+            if (RegistrationLibrary.areNull(namaTextBox.Text) || RegistrationLibrary.areNull(usernameTextBox.Text) || RegistrationLibrary.areNull(pwTextBox.Text) || RegistrationLibrary.areNull(cpwTextBox.Text))
+            {
+                MessageBox.Show("Silahkan isi kolom yang masih kosong");
+            }
+            else if (RegistrationClass.checkUsername(namaTextBox.Text)){
                 MessageBox.Show("Username sudah ada, silahkan masukkan ulang.");
             }else if (!RegistrationClass.checkPassword(pwTextBox.Text)) {
                 MessageBox.Show("Password minimal 8 karakter");
@@ -41,9 +46,17 @@ namespace RegistrationForm
                 MessageBox.Show("password tidak sama, silahkan masukkan ulang");
             }
             else
-            { 
-                RegistrationClass.createAkun(namaTextBox.Text, usernameTextBox.Text, pwTextBox.Text);
-                MessageBox.Show("Akun Berhasil Dibuat");
+            {
+                try
+                {
+                    RegistrationClass.createAkun(namaTextBox.Text, usernameTextBox.Text, pwTextBox.Text);
+                    MessageBox.Show("Akun Berhasil Dibuat, silahkan ke halaman login");
+                } catch (Exception ex)
+                {
+                    MessageBox.Show("Terjadi kesalahan pada saat register: " +  ex.Message);
+                }
+                
+                
             }
 
 
